@@ -1,0 +1,91 @@
+    {
+       "endpoints":[
+          {
+             "name":"Source List",
+             "methods":
+             [
+                {
+                   "MethodName":"/sources",
+                   "Synopsis":"Retrieves a list of all available cities.",
+                   "HTTPMethod":"GET",
+                   "URI":"/sources",
+                   "RequiresOAuth":"N",
+                   "parameters": [
+                      {
+                         "Name" : "client",
+                         "Required" : "y",
+                         "Default" : "paste yo' client id",
+                         "Type" : "string",
+                         "Description" : "Your unique user ID. We provide it to you :)"
+                      },
+                      {
+                         "Name" : "token",
+                         "Required" : "y",
+                         "Default" : "paste yo' auth token",
+                         "Type" : "string",
+                         "Description" : "Your unique authorization token. Keep it secret, keep it safe."
+                      }
+                   ]              
+                },
+                {
+                   "MethodName":"/submit",
+                   "Synopsis":"Retrieves a list of all available cities.",
+                   "HTTPMethod":"POST",
+                   "URI":"/submit",
+                   "RequiresOAuth":"N",
+                   "parameters": [
+                      {
+                         "Name" : "client",
+                         "Required" : "y",
+                         "Default" : "paste yo' client id",
+                         "Type" : "string",
+                         "Description" : "Your unique user ID. We provide it to you :)"
+                      },
+                      {
+                         "Name" : "token",
+                         "Required" : "y",
+                         "Default" : "paste yo' auth token",
+                         "Type" : "string",
+                         "Description" : "Your unique authorization token. Keep it secret, keep it safe."
+                      },
+                      {
+                         "Name" : "uri",
+                         "Required" : "y",
+                         "Default" : "www.example.com",
+                         "Type" : "string",
+                         "Description": "The URI you would like to test. For non-HTTP tests, it will be parsed into a domain"
+                      },
+                      {
+                         "Name" : "services",
+                         "Required" : "y",
+                         "Type" : "string",
+                         "Description" : " \"http\": \"Where’s It Up? API performs an HTTP HEAD request against the specified URL\", \"dig\": \"The system performs a dig lookup of the provided domain.\", \"trace\": \"The system performs a traceroute -T lookup on the provided domain.\", \"ping\": \"The system performs a ping -i 0.5 -n -q -c 10 lookup on the provided domain.\", \"edge\": \"Where’s It Up? API downloads a file from a remote server. edge supports range parameters. It then returns the timing details, and the hash of downloaded file.\" "
+                      },
+                      {
+                         "Name" : "sources",
+                         "Required" : "y",
+                         "Default" : "Montreal",
+                         "Type" : "List of Strings",
+                         "Description": "The locations (cities) that you want to test from. Every source will perform every requested service."
+                      },
+                      {
+                         "Name": "method",
+                         "Required": "n",
+                         "Default" : "HEAD",
+                         "Type": "String",
+                         "Description": "By default, the system performs a HEAD request. You may alternately specify a GET request"
+                      },
+                      {
+                         "Name": "headers",
+                         "Required": "n",
+                         "Default": "",
+                         "Type": "String",
+                         "Description" : "The system includes User-Agent: wheresitup.com/v3. This indicates that the request is from Where’s It Up. You may override this inclusion, or specify additional headers to the request. We reserve the right to update the version number as the system develops."
+                      }
+                   ]
+                }
+             ]
+          }
+       ]
+    }
+
