@@ -26,6 +26,13 @@
                          "Description" : "Your unique authorization token. Keep it secret, keep it safe."
                       },
                       {
+                         "Name" : "puppies",
+                         "Required" : "y",
+                         "Default" : true,
+                         "Type" : "boolean",
+                         "Description" : "Include puppies with the response"
+                      },
+                      {
                 "Name":"cereal",
                 "Required":"Y",
                 "Default":"fruitscoops",
