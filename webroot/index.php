@@ -47,14 +47,14 @@ HEADER;
 		{
 			echo <<<BLOCK
 			<li>
-			<div class="endpoint"><span>{$method['HTTPMethod']}</span><span>{$method['MethodName']}</span></div>
+			<div class="endpoint"><code>{$method['HTTPMethod']}</code><code>{$method['MethodName']}</code></div>
 			<div class="endpoint-description">
 				<span>{$method['MethodName']}</span>
 				<span>{$method['Synopsis']}</span>
 			</div>
 
 
-			<form>
+			<form method="post" action="/submit.php?method={$method['MethodName']}">
 			<table class="table table-hover">
               <thead>
                 <tr>
@@ -74,6 +74,7 @@ BLOCK;
 			echo <<<BLOCK
 			</tbody>
 			</table>
+			<input type="submit">
 			</form>
 			</li>
 BLOCK;
