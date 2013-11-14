@@ -53,7 +53,8 @@ HEADER;
     			<span>{$method['Synopsis']}</span>
             </div>
 
-			<form class="form-inline" method="post" action="/submit.php?method={$method['MethodName']}">
+			<form class="form-inline apiform" method="post" action="/submit.php?method={$method['MethodName']}">
+			<input type="hidden" name="method" value="{$method['MethodName']}">
 			<table class="table table-hover">
               <thead>
                 <tr>
@@ -75,6 +76,8 @@ BLOCK;
 			</table>
 			<input class="btn btn-primary" type="submit">
 			</form>
+			<div class="response-header" id="{$method['MethodName']}-response-header" style="display:none">
+			<div class="response-body" id="{$method['MethodName']}-response-body" style="display:none">
 			</li>
         </div>
 BLOCK;
@@ -87,6 +90,7 @@ BLOCK;
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/api.js" type="text/javascript"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
