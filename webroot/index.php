@@ -26,6 +26,7 @@ if(!isset($_GET['api']))
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
       <link href="bootstrap/css/custom.css" rel="stylesheet">
 
+
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -55,7 +56,7 @@ HEADER;
 			<!-- </div> -->
 
 
-			<form class="form-inline" method="post" action="/submit.php?method={$method['MethodName']}">
+			<form class="form-inline apiform" method="post" action="/submit.php?method={$method['MethodName']}">
 			<table class="table table-hover">
               <thead>
                 <tr>
@@ -88,9 +89,10 @@ BLOCK;
 	</div>
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/js/jquery-2.0.3.min.js" type="text/javascript"></script>
+    <script src="/js/api.js" type="text/javascript"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
 
