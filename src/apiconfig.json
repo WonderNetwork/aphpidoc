@@ -105,7 +105,8 @@
             "publicPath": "/v3",
             "auth": "",
             "headers": {
-                "Content-Type" : "application/x-www-form-urlencoded"
+                "Content-Type" : "application/json",
+                "Auth": "Bearer 506a121ea7ec61e60605dc4d 99cd47cda39ddb8e91a2cb0606dc7a6a"
             }
         }
     }
