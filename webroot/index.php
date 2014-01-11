@@ -40,7 +40,7 @@ HEADER;
 	echo " <h1>API Thing</h1>\n<ul class=\"list-unstyled\">\n";
 	foreach($j['endpoints'] as $endpoint)
 	{
-		echo "<li><span class=\"endpoint-name\"><h2>{$endpoint['name']}</h2></span>\n";
+		echo "<li><h2 class=\"endpoint-name\">{$endpoint['name']}</h2>\n";
 		echo '<ul class="list-unstyled">';
 		foreach($endpoint['methods'] as $method)
 		{
@@ -57,11 +57,11 @@ HEADER;
 			<table class="table table-hover">
               <thead>
                 <tr>
-                  <th width="120px">Parameter</th>
-                  <th width="250px">Value</th>
-                  <th width="130px">Type</th>
-                  <th width="110px">Required</th>
-                  <th width="570px">Description</th>
+                  <th style="width:120px">Parameter</th>
+                  <th style="width:250px">Value</th>
+                  <th style="width:130px">Type</th>
+                  <th style="width:110px">Required</th>
+                  <th style="width:570px">Description</th>
                 </tr>
               </thead>
 			<tbody>
@@ -73,11 +73,13 @@ BLOCK;
 			echo <<<BLOCK
 			</tbody>
 			</table>
-			<input type="submit">
+			<input class="btn btn-primary" type="submit">
 			</form>
 			</li>
+
 BLOCK;
 		}
+		echo "</ul>";
 	}
 	echo "</ul>";
 	echo <<<FOOTER
@@ -124,7 +126,7 @@ BLOCK;
 		case "enumerated":
 			echo <<<BLOCK
 			<tr>
-				<td><label for="frm-{$param['name']}">
+				<td><label for="frm-{$param['Name']}">
 				{$param['Name']}
 				<span class="fl-error"></span>
 				</label>
