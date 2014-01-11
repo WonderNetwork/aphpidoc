@@ -54,7 +54,7 @@ HEADER;
 			</div>
 
 
-			<form method="post" action="/submit.php?method={$method['MethodName']}">
+			<form class="form-inline" method="post" action="/submit.php?method={$method['MethodName']}">
 			<table class="table table-hover">
               <thead>
                 <tr>
@@ -114,7 +114,7 @@ function getParameterHtml($param)
 				</label>
 				</td>
 				<td>
-				<input id="frm-{$param['Name']}" type="text" value="{$param['Default']}" name="{$param['Name']}">
+				<input class="form-control" id="frm-{$param['Name']}" type="text" value="{$param['Default']}" name="{$param['Name']}">
 				</td>
 				<td>{$param['Type']}</td>
 				<td>{$param['Required']}</td>
@@ -131,7 +131,7 @@ BLOCK;
 				</label>
 				</td>
 				<td>
-				<select name="{$param['Name']}">
+				<select class="form-control" name="{$param['Name']}">
 BLOCK;
 			foreach($param['EnumeratedList'] as $option)
 			{
