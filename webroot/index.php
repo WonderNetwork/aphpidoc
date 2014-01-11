@@ -20,10 +20,11 @@ if(!isset($_GET['api']))
 <!DOCTYPE html>
   <html>
     <head>
-      <title>API Thing</title>
+      <title>aphpidoc</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Bootstrap -->
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+      <link href="bootstrap/css/custom.css" rel="stylesheet">
 
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,12 +46,12 @@ HEADER;
 		foreach($endpoint['methods'] as $method)
 		{
 			echo <<<BLOCK
-			<li>
-			<div class="endpoint"><code>{$method['HTTPMethod']}</code><code>{$method['MethodName']}</code></div>
-			<div class="endpoint-description">
+			<li class="endpoint">
+			<code>{$method['HTTPMethod']}</code><code>{$method['MethodName']}</code>
+			<!-- <div class="endpoint-description"> -->
 				<!-- <span>{$method['MethodName']}</span> -->
 				<span>{$method['Synopsis']}</span>
-			</div>
+			<!-- </div> -->
 
 
 			<form class="form-inline" method="post" action="/submit.php?method={$method['MethodName']}">

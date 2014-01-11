@@ -1,0 +1,11 @@
+/*!
+ * Custom CSS for aphpidoc
+ * Copyright 2014 Paul Reinheimer and Allison Moore
+ */
+
+.endpoint {
+	outline: 2px;
+	margin: 10px 0px;
+}
+
+
