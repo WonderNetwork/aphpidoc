@@ -38,7 +38,7 @@ if(!isset($_GET['api']))
     <div class="row">
 HEADER;
 
-	echo " <ul class=\"list-unstyled\">\n";
+	echo "<ul class=\"list-unstyled\">\n";
 	foreach($j['endpoints'] as $endpoint)
 	{
 		echo "<li><span class=\"endpoint-name\"><h2>{$endpoint['name']}</h2></span>\n";
@@ -49,7 +49,7 @@ HEADER;
 			<li>
 			<div class="endpoint"><code>{$method['HTTPMethod']}</code><code>{$method['MethodName']}</code></div>
 			<div class="endpoint-description">
-				<span>{$method['MethodName']}</span>
+				<!-- <span>{$method['MethodName']}</span> -->
 				<span>{$method['Synopsis']}</span>
 			</div>
 
@@ -58,11 +58,11 @@ HEADER;
 			<table class="table table-hover">
               <thead>
                 <tr>
-                  <th>Parameter</th>
-                  <th>Value</th>
-                  <th>Type</th>
-                  <th>Required</th>
-                  <th>Description</th>
+                  <th width="120px">Parameter</th>
+                  <th width="250px">Value</th>
+                  <th width="130px">Type</th>
+                  <th width="110px">Required</th>
+                  <th width="570px">Description</th>
                 </tr>
               </thead>
 			<tbody>
