@@ -1,5 +1,4 @@
-<h1>API Thing</h1>
-<ul><?php
+<?php
 
 
 if(!isset($_GET['api']))
@@ -38,7 +37,7 @@ if(!isset($_GET['api']))
     <div class="row">
 HEADER;
 
-	echo "<ul class=\"list-unstyled\">\n";
+	echo " <h1>API Thing</h1>\n<ul class=\"list-unstyled\">\n";
 	foreach($j['endpoints'] as $endpoint)
 	{
 		echo "<li><span class=\"endpoint-name\"><h2>{$endpoint['name']}</h2></span>\n";
