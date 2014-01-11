@@ -46,7 +46,8 @@ HEADER;
 		foreach($endpoint['methods'] as $method)
 		{
 			echo <<<BLOCK
-			<li class="endpoint">
+			<div class="endpoint">
+			<li>
 			<code>{$method['HTTPMethod']}</code><code>{$method['MethodName']}</code>
 			<!-- <div class="endpoint-description"> -->
 				<!-- <span>{$method['MethodName']}</span> -->
@@ -77,7 +78,7 @@ BLOCK;
 			<input class="btn btn-primary" type="submit">
 			</form>
 			</li>
-
+		</div>
 BLOCK;
 		}
 		echo "</ul>";

@@ -4,8 +4,14 @@
  */
 
 .endpoint {
-	outline: 2px;
 	margin: 10px 0px;
+	background-color: #fff;
+	border-width: 1px;
+	border-color: #ddd;
+	border-radius: 4px 4px 0 0;
+	border-style: solid;
+	box-shadow: none;
+	padding: 45px 15px 15px;
 }
 
 
