@@ -11,7 +11,13 @@
 	border-radius: 4px 4px 0 0;
 	border-style: solid;
 	box-shadow: none;
-	padding: 45px 15px 15px;
+	padding: 15px;
 }
 
+.endpoint-name {
+	top: 15px;
+	left: 15px;
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
 

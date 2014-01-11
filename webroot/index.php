@@ -26,7 +26,6 @@ if(!isset($_GET['api']))
       <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
       <link href="bootstrap/css/custom.css" rel="stylesheet">
 
-
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
       <!--[if lt IE 9]>
@@ -42,21 +41,19 @@ HEADER;
 	echo " <h1>API Thing</h1>\n<ul class=\"list-unstyled\">\n";
 	foreach($j['endpoints'] as $endpoint)
 	{
-		echo "<li><h2 class=\"endpoint-name\">{$endpoint['name']}</h2>\n";
+		echo "<li><h2>{$endpoint['name']}</h2>\n";
 		echo '<ul class="list-unstyled">';
 		foreach($endpoint['methods'] as $method)
 		{
 			echo <<<BLOCK
 			<div class="endpoint">
 			<li>
-			<code>{$method['HTTPMethod']}</code><code>{$method['MethodName']}</code>
-			<!-- <div class="endpoint-description"> -->
-				<!-- <span>{$method['MethodName']}</span> -->
-				<span>{$method['Synopsis']}</span>
-			<!-- </div> -->
+			<div class="endpoint-name">
+                <code>{$method['HTTPMethod']}{$method['MethodName']}</code>
+    			<span>{$method['Synopsis']}</span>
+            </div>
 
-
-			<form class="form-inline apiform" method="post" action="/submit.php?method={$method['MethodName']}">
+			<form class="form-inline" method="post" action="/submit.php?method={$method['MethodName']}">
 			<table class="table table-hover">
               <thead>
                 <tr>
@@ -79,7 +76,7 @@ BLOCK;
 			<input class="btn btn-primary" type="submit">
 			</form>
 			</li>
-		</div>
+        </div>
 BLOCK;
 		}
 		echo "</ul>";
@@ -89,10 +86,9 @@ BLOCK;
 	</div>
 	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/js/jquery-2.0.3.min.js" type="text/javascript"></script>
-    <script src="/js/api.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
 
