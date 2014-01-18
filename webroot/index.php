@@ -45,6 +45,7 @@ HEADER;
 		echo '<ul class="list-unstyled">';
 		foreach($endpoint['methods'] as $method)
 		{
+			$method['MethodName'] = substr($method['MethodName'], 1);
 			echo <<<BLOCK
 			<div class="endpoint">
 			<li>
@@ -76,8 +77,8 @@ BLOCK;
 			</table>
 			<input class="btn btn-primary" type="submit">
 			</form>
-			<div class="response-header" id="{$method['MethodName']}-response-header" style="display:none">
-			<div class="response-body" id="{$method['MethodName']}-response-body" style="display:none">
+			<div class="response-header" id="{$method['MethodName']}-response-header" style="display:none; white-space: pre; font-family: Courier;"></div>
+			<div class="response-body" id="{$method['MethodName']}-response-body" style="display:none;  white-space: pre;font-family: Courier;"></div>
 			</li>
         </div>
 BLOCK;
