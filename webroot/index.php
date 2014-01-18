@@ -38,7 +38,7 @@ if(!isset($_GET['api']))
     <div class="row">
 HEADER;
 
-	echo " <h1>API Thing</h1>\n<ul class=\"list-unstyled\">\n";
+	echo " <h1>aPHPidoc</h1>\n<ul class=\"list-unstyled\">\n";
 	foreach($j['endpoints'] as $endpoint)
 	{
 		echo "<li><h2>{$endpoint['name']}</h2>\n";
