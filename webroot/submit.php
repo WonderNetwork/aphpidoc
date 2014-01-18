@@ -38,6 +38,8 @@ $return = array(
 		"headers" => $call->response_headers,
 		"body" => $call->response_body,
 		"status" => $call->response_status,
+		"body_raw" => $call->response_body_raw,
+		"headers_raw" => $call->response_headers_raw
 	)
 
 );
@@ -126,6 +128,8 @@ class api
 		$data = $this->splitRaw($raw);
 		$headers = $this->parseHeaders($data[0]);
 
+		$this->response_headers_raw = $data[0];
+		$this->response_body_raw = $data[1];
 		$this->response_headers = $headers;
 		$this->response_body = json_decode($data[1]);
 		$this->response_status = 200;
